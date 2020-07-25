@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Webpage Title -->
+    <title>나홀로 쇼핑몰</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+
+        .img {
+            background-image: url('http://blogfiles.naver.net/MjAxODAzMTlfNzMg/MDAxNTIxNDQ3NTgyNzE4.A5SKXvDIyiYU_TqqUdroS7SkGSiy0Q1SdAKU5OxjAWkg.aywk6I6YeIqMn5nu0zK05b0q3XEsCXuN-uhWJOQ_5M8g.JPEG.ommmgo/%BC%AD%BF%EF_%BD%BA%BD%C3_%BF%C0%B8%B6%C4%AB%BC%BC_%B8%C0%C1%FD_%B5%B5%BB%EA%B0%F8%BF%F8_%BD%BA%BD%C3%BF%EC%BF%C0_%B7%B1%C4%A1_%BF%C0%B8%B6%C4%AB%BC%BC_%C1%A1%BD%C9_%C4%DA%BD%BA_%281%29.JPG');
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+            height: 300px;
+        }
+
+        .info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            margin: 20px 5px auto 5px;
+        }
+
+        h1, h5 {
+            display: inline;
+        }
+
+        .order {
+            text-align: center;
+        }
+
+        .orders {
+            margin-top: 100px;
+        }
+
+           .times {
+            margin-top: 100px;
+        }
+
+        .info-temp {
+            color: blue;
+        }
+    </style>
+
+    <script>
+    function aaa() {
+            alert('예약이 완료되었습니다.');// 여기에 코드를 작성하세요.
+        }
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="img"></div>
+    <div class="info">
+        <h1>일식 오마카세 전문점 현수사</h1>
+        <p>
+        <h5>점심 오마카세 : 1인당 5,000,000원</p>
+        <p>
+            저녁 오마카세 : 1인당 8,000,000원</h5></p>
+        <p>※ 주방장 한식조리기능사 자격증 보유</p>
+        </div>
+    <div class="info">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">주문자 이름</span>
+            </div>
+            <input type="text" class="form-control" id="order-name" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">점심/저녁</label>
+            </div>
+            <select class="custom-select" id="order-count">
+                <option selected value=""> -- 점심 : 12:00 ~ 13:30 / 저녁 : 18:30 ~ 20:00 --</option>
+                <option value="1">점심</option>
+                <option value="2">저녁</option>
+            </select>
+
+
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">예약자 수를 적어주세요. ex) 2 or 3 or 4</span>
+            </div>
+            <input type="text" class="form-control" id="order-address" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">연락처</span>
+            </div>
+            <input type="text" class="form-control" id="order-phone" aria-describedby="basic-addon3">
+        </div>
+        <div class="order">
+            <button onclick="aaa()" type="button" class="btn btn-primary">예약 신청하기</button>
+        </div>
+    </div>
+    <div class="orders">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">점심/저녁</th>
+                <th scope="col">인원수</th>
+                <th scope="col">전화번호</th>
+            </tr>
+            </thead>
+            <tbody id="orders-box">
+            <tr>
+                <td>홍길동</td>
+                <td>점심</td>
+                <td>3</td>
+                <td>010-0000-0000</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
